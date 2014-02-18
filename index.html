@@ -87,13 +87,15 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js">
-        	function derp(){
-        		var tigers = '';
-        		$.ajax('https://api.github.com/users/squee22').done(function(bears){tigers = bears.avatar_url;});
-        		$('.lions').html('<img src="'+tigers+'" alt = "Scott sort of made this under direct supervision.">')	
-        	}
+        	function derp(){}
         	
-        	$('.lions button').click(function(){derp();});
+        	$('.lions button').click(function(){
+        		var tigers = '';
+        		$.ajax('https://api.github.com/users/squee22').done(function(bears){
+        			tigers = bears.avatar_url;
+        			$('.lions').html('<img src="'+tigers+'" alt="Scott sort of made this under direct supervision." />');
+        		});
+        	});
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
